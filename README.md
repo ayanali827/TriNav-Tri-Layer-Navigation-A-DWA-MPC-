@@ -1,1 +1,1 @@
-# TriNav-Tri-Layer-Navigation-A-DWA-MPC-
+# TriNav-Tri-Layer-Navigation-(A*-DWA-MPC)
