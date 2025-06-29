@@ -35,7 +35,7 @@ The system uses a hierarchical approach:
 
 ### Prerequisites
 - Python 3.10+
-- MuJoCo (with valid license)
+- MuJoCo 3.3.2
 
 ### Using pip
 ```bash
