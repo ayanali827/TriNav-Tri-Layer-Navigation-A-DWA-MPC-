@@ -24,12 +24,12 @@ The system uses a hierarchical approach:
 
 ## Algorithms Implemented
 
-| Category         | Algorithm      | Status | Animation Example |
-|------------------|----------------|--------|-------------------|
-| Global Planning  | A*             | ✅     | ![A* Path](docs/a_star_path.png) |
-| Local Planning   | DWA            | ✅     | ![DWA Planning](docs/dwa_planning.gif) |
-| Trajectory Opt.  | MPC            | ✅     | ![MPC Control](docs/mpc_control.gif) |
-| Control          | PID            | ✅     | ![PID Control](docs/pid_control.png) |
+| Category         | Algorithm      | Status |
+|------------------|----------------|--------|
+| Global Planning  | A*             | ✅     | 
+| Local Planning   | DWA            | ✅     | 
+| Trajectory Opt.  | MPC            | ✅     |
+| Control          | PID            | ✅     |
 
 ## Installation
 
