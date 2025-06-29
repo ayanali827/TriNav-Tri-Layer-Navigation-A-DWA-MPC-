@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<mujoco>
+    <asset>
+        <texture name="grid" type="2d" builtin="checker" width="512" height="512" rgb1=".1 .2 .3"
+            rgb2=".2 .3 .4" />
+        <material name="grid" texture="grid" texrepeat="1 1" texuniform="true" reflectance=".2" />
+        <mesh name="chasis" scale=".1 .06 .015"
+            vertex=" 9   2   0
+              -10  10  10
+               9  -2   0
+               10  3  -10
+               10 -3  -10
+              -8   10 -10
+              -10 -10  10
+              -8  -10 -10
+              -5   0   20" />
+    </asset>
+
+    <default>
+        <joint damping=".005" actuatorfrcrange="-1000 1000" />
+        <default class="wheel">
+            <geom type="cylinder" size=".2 .05" rgba=".5 .5 1 1" friction="0.01" />
+        </default>
+        <default class="decor">
+            <site type="box" rgba=".5 1 .5 1" />
+        </default>
+    </default>
+
+    <worldbody>
+        <body name="floor" pos="10 10 0">
+            <geom name="floor_geom" type="plane" size="50 50 1" material="grid" />
+        </body>
+
+        <body name="obstacles">
+            <geom name="obstacle_0" type="box" size="0.05 0.05 0.5" pos="1.2 10.8 0"
+                rgba="0 0 0.9 1" />
+            <geom name="obstacle_1" type="box" size="0.05 0.05 0.5" pos="16.8 1.2 0"
+                rgba="0 0 0.9 1" />
+            <geom name="obstacle_2" type="box" size="0.05 0.05 0.5" pos="2.5 2.5 0" rgba="0 0 0.9 1" />
+            <geom name="obstacle_3" type="box" size="0.05 0.05 0.5" pos="15.5 10.5 0"
+                rgba="0 0 0.9 1" />
+            <geom name="obstacle_4" type="box" size="0.05 0.05 0.5" pos="1.0 6.0 0" rgba="0 0 0.9 1" />
+            <geom name="obstacle_5" type="box" size="0.05 0.05 0.5" pos="17.0 6.0 0"
+                rgba="0 0 0.9 1" />
+            <geom name="obstacle_6" type="box" size="0.05 0.05 0.5" pos="4.0 11.0 0"
+                rgba="0 0 0.9 1" />
+            <geom name="obstacle_7" type="box" size="0.05 0.05 0.5" pos="14.0 1.0 0"
+                rgba="0 0 0.9 1" />
+            <geom name="obstacle_8" type="box" size="0.05 0.05 0.5" pos="3.0 8.5 0" rgba="0 0 0.9 1" />
+            <geom name="obstacle_9" type="box" size="0.05 0.05 0.5" pos="15.0 3.5 0"
+                rgba="0 0 0.9 1" />
+            <geom name="obstacle_10" type="box" size="0.05 0.05 0.5" pos="8.0 1.5 0"
+                rgba="0 0 0.9 1" />
+            <geom name="obstacle_11" type="box" size="0.05 0.05 0.5" pos="10.0 10.5 0"
+                rgba="0 0 0.9 1" />
+            <geom name="obstacle_12" type="box" size="0.05 0.05 0.5" pos="1.5 3.5 0"
+                rgba="0 0 0.9 1" />
+            <geom name="obstacle_13" type="box" size="0.05 0.05 0.5" pos="16.5 8.5 0"
+                rgba="0 0 0.9 1" />
+            <geom name="obstacle_14" type="box" size="0.05 0.05 0.5" pos="5.5 5.0 0"
+                rgba="0 0 0.9 1" />
+            <geom name="obstacle_15" type="box" size="0.05 0.05 0.5" pos="12.5 7.0 0"
+                rgba="0.8 0 0 1" />
+            <geom name="obstacle_16" type="box" size="0.05 0.05 0.5" pos="9.0 8.0 0"
+                rgba="0.8 0 0 1" />
+            <geom name="obstacle_17" type="box" size="0.05 0.05 0.5" pos="9.0 4.0 0"
+                rgba="0.8 0 0 1" />
+            <geom name="obstacle_18" type="box" size="0.05 0.05 0.5" pos="3.5 6.5 0"
+                rgba="0.8 0 0 1" />
+            <geom name="obstacle_19" type="box" size="0.05 0.05 0.5" pos="14.5 5.5 0"
+                rgba="0.8 0 0 1" />
+            <geom name="obstacle_20" type="box" size="0.05 0.05 0.5" pos="7.0 9.0 0"
+                rgba="0.8 0 0 1" />
+            <geom name="obstacle_21" type="box" size="0.05 0.05 0.5" pos="11.0 3.0 0"
+                rgba="0.8 0 0 1" />
+            <geom name="obstacle_22" type="box" size="0.05 0.05 0.5" pos="6.0 2.0 0"
+                rgba="0.8 0 0 1" />
+            <geom name="obstacle_23" type="box" size="0.05 0.05 0.5" pos="12.0 9.0 0"
+                rgba="0.8 0 0 1" />
+            <geom name="obstacle_24" type="box" size="0.05 0.05 0.5" pos="8.5 6.0 0"
+                rgba="0.8 0 0 1" />
+        </body>
+
+        <body name="car" pos="-5 -5 0.5">
+            <freejoint />
+            <light name="top light" pos="0 0 2" mode="trackcom" diffuse=".4 .4 .4" />
+            <geom name="chasis" type="mesh" mesh="chasis" />
+            <geom name="front wheel" pos=".8 0 -.15" type="sphere" size=".15" condim="1"
+                priority="1" />
+            <light name="front light" pos="1 0 .2" dir="2 0 -1" diffuse="1 1 1" />
+            <body name="left wheel" pos="-.7 .6 0" zaxis="0 1 0">
+                <joint name="left" />
+                <geom class="wheel" />
+                <site class="decor" size=".06 .25 .12" />
+                <site class="decor" size=".25 .06 .12" />
+            </body>
+            <body name="right wheel" pos="-.7 -.6 0" zaxis="0 1 0">
+                <joint name="right" />
+                <geom class="wheel" />
+                <site class="decor" size=".06 .25 .12" />
+                <site class="decor" size=".25 .06 .12" />
+            </body>
+        </body>
+    </worldbody>
+
+    <tendon>
+        <fixed name="forward">
+            <joint joint="left" coef="200.0" />
+            <joint joint="right" coef="200.0" />
+        </fixed>
+        <fixed name="turn">
+            <joint joint="left" coef="-200.0" />
+            <joint joint="right" coef="200.0" />
+        </fixed>
+    </tendon>
+
+    <actuator>
+        <motor name="forward" tendon="forward" ctrlrange="-10 10" />
+        <motor name="turn" tendon="turn" ctrlrange="-10 10" />
+    </actuator>
+
+    <sensor>
+        <jointactuatorfrc name="right" joint="right" />
+        <jointactuatorfrc name="left" joint="left" />
+    </sensor>
+</mujoco>
