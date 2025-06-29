@@ -170,6 +170,4 @@ This project references and builds upon concepts from:
 - [Dynamic Window Approach](https://www.ri.cmu.edu/pub_files/pub1/fox_dieter_1997_1/fox_dieter_1997_1.pdf)
 - [Model Predictive Control](https://arxiv.org/abs/1705.02789)
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
