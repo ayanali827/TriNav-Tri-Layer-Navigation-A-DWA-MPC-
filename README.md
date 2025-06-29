@@ -29,7 +29,6 @@ The system uses a hierarchical approach:
 | Global Planning  | A*             | ✅     | ![A* Path](docs/a_star_path.png) |
 | Local Planning   | DWA            | ✅     | ![DWA Planning](docs/dwa_planning.gif) |
 | Trajectory Opt.  | MPC            | ✅     | ![MPC Control](docs/mpc_control.gif) |
-| Curve Generation | Bézier         | ✅     | ![Bézier Curve](docs/bezier_curve.png) |
 | Control          | PID            | ✅     | ![PID Control](docs/pid_control.png) |
 
 ## Installation
@@ -159,7 +158,7 @@ Contributions are welcome! Please follow these steps:
 
 1. Fork the repository
 2. Create a new branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
+3. Commit your changes (`git commit -am 'Add some feature`)
 4. Push to the branch (`git push origin feature/your-feature`)
 5. Create a Pull Request
 
