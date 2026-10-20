@@ -1,4 +1,8 @@
-# Motion Planning for Differential Drive Robots
+# TriLayer-Nav
+
+Hierarchical navigation for differential-drive robots: **A\*** (global planning) → **DWA** (local obstacle avoidance) → **MPC** (trajectory following) → **PID** (low-level control), simulated in MuJoCo.
+
+> **Paper:** U. A. B. Mughal, A. Ali, Urwa, and M. V. Abramchuk, "TriLayer-Nav: A Tri-Layer Navigation Framework Integrating A*, Dynamic Window Approach, and Model Predictive Control for Differential-Drive Robots," *Gyroscopy and Navigation*, 2026, Vol. 17, No. 1, pp. 24–33. https://doi.org/10.1134/S2075108726700094
 
 ## Introduction
 
@@ -26,8 +30,8 @@ The system uses a hierarchical approach:
 
 | Category         | Algorithm      | Status |
 |------------------|----------------|--------|
-| Global Planning  | A*             | ✅     | 
-| Local Planning   | DWA            | ✅     | 
+| Global Planning  | A*             | ✅     |
+| Local Planning   | DWA            | ✅     |
 | Trajectory Opt.  | MPC            | ✅     |
 | Control          | PID            | ✅     |
 
@@ -44,8 +48,8 @@ pip install numpy scipy matplotlib mujoco
 
 ### From Source
 ```bash
-git clone https://github.com/yourusername/differential-drive-motion-planning.git
-cd differential-drive-motion-planning
+git clone https://github.com/ayanali827/TriNav-Tri-Layer-Navigation-A-DWA-MPC-.git
+cd TriNav-Tri-Layer-Navigation-A-DWA-MPC-
 pip install -r requirements.txt
 ```
 
@@ -152,13 +156,30 @@ max_speed = 4.0              # Maximum robot speed (m/s)
 - **Observer**: Visualization updates on state changes
 - **Facade**: Simplified interfaces for complex subsystems
 
+## Citation
+
+If you use this code, please cite the paper:
+
+```bibtex
+@article{mughal2026trilayernav,
+  title   = {TriLayer-Nav: A Tri-Layer Navigation Framework Integrating A*, Dynamic Window Approach, and Model Predictive Control for Differential-Drive Robots},
+  author  = {Mughal, U. A. B. and Ali, A. and Urwa and Abramchuk, M. V.},
+  journal = {Gyroscopy and Navigation},
+  volume  = {17},
+  number  = {1},
+  pages   = {24--33},
+  year    = {2026},
+  doi     = {10.1134/S2075108726700094}
+}
+```
+
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
 
 1. Fork the repository
 2. Create a new branch (`git checkout -b feature/your-feature`)
-3. Commit your changes (`git commit -am 'Add some feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin feature/your-feature`)
 5. Create a Pull Request
 
@@ -169,5 +190,3 @@ This project references and builds upon concepts from:
 - [MuJoCo Physics Simulator](https://mujoco.org/)
 - [Dynamic Window Approach](https://www.ri.cmu.edu/pub_files/pub1/fox_dieter_1997_1/fox_dieter_1997_1.pdf)
 - [Model Predictive Control](https://arxiv.org/abs/1705.02789)
-
-
