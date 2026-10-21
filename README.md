@@ -133,13 +133,10 @@ max_speed = 4.0              # Maximum robot speed (m/s)
 ## Examples of Work
 
 ### Navigation Through Obstacles
-![Obstacle Navigation](docs/obstacle_navigation.gif)
+![MuJoCo simulation environment — differential-drive robot among cylindrical obstacles](assets/Enviroment%20mujoco.png)
 
-### Performance Metrics
-![Performance Report](docs/performance_report.png)
-
-### Control Signals
-![Control Signals](docs/control_signals.png)
+### Performance and Control Analysis
+![Run analysis — trajectory vs global path, heading and velocity profiles, control signals, and DWA vs MPC command comparison](assets/Result.jpg)
 
 ## Design Patterns and Principles
 
